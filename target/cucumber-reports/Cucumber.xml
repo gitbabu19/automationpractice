@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="46.78219">
+<testcase classname="Register User on http://newtours.demoaut.com/" name="Register User TC01" time="46.78219">
+<system-out><![CDATA[Given User is on Home Page..................................................passed
+When User clicks on Register link...........................................passed
+And User enter Contact Information  "Sanvi" "Dahi" "1234567890""sanvi01@gmail.com".passed
+And User enter Mailing Information  "Pune""Pune""MH""411057""INDIA".........passed
+And User enter User Information  "Sanvi02""Temp@123""Temp@123"..............passed
+Then User clicks on Submit button...........................................passed
+Then User is registered.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

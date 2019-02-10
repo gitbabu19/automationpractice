@@ -1,0 +1,206 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 35512364142,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.beforeScenario()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Register User TC01",
+        "description": "",
+        "id": "register-user-on-http://newtours.demoaut.com/;register-user-tc01;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 86336,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1198896712,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "StepDefs.user_is_on_Home_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2517520144,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User clicks on Register link",
+            "match": {
+              "location": "StepDefs.user_clicks_on_Register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1532325840,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enter Contact Information  \"Sanvi\" \"Dahi\" \"1234567890\"\"sanvi01@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sanvi",
+                  "offset": 33
+                },
+                {
+                  "val": "Dahi",
+                  "offset": 41
+                },
+                {
+                  "val": "1234567890",
+                  "offset": 48
+                },
+                {
+                  "val": "sanvi01@gmail.com",
+                  "offset": 60
+                }
+              ],
+              "location": "StepDefs.user_enter_contact_Information(String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1326940051,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User enter Mailing Information  \"Pune\"\"Pune\"\"MH\"\"411057\"\"INDIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Pune",
+                  "offset": 33
+                },
+                {
+                  "val": "Pune",
+                  "offset": 39
+                },
+                {
+                  "val": "MH",
+                  "offset": 45
+                },
+                {
+                  "val": "411057",
+                  "offset": 49
+                },
+                {
+                  "val": "INDIA",
+                  "offset": 57
+                }
+              ],
+              "location": "StepDefs.user_enter_Mailing_Information(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              16,
+              8,
+              10,
+              12,
+              14
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 535401933,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User enter User Information  \"Sanvi02\"\"Temp@123\"\"Temp@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sanvi02",
+                  "offset": 30
+                },
+                {
+                  "val": "Temp@123",
+                  "offset": 39
+                },
+                {
+                  "val": "Temp@123",
+                  "offset": 49
+                }
+              ],
+              "location": "StepDefs.user_enter_User_Information(String,String,String)"
+            },
+            "matchedColumns": [
+              18,
+              20,
+              22
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2985437614,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User clicks on Submit button",
+            "match": {
+              "location": "StepDefs.user_clicks_on_Submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1173217527,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User is registered",
+            "match": {
+              "location": "StepDefs.user_is_registered()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Register User on http://newtours.demoaut.com/",
+    "description": "",
+    "id": "register-user-on-http://newtours.demoaut.com/",
+    "keyword": "Feature",
+    "uri": "Register.feature"
+  }
+]
