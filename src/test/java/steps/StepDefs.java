@@ -20,24 +20,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import po.RegisterPage;
 import utils.Config;
-
+import utils.DriverManager;
 public class StepDefs {
     RegisterPage pg;
     WebDriver driver;
     Config cg;
 
+
     @Before
     public void beforeScenario(){
-        System.out.println("This will run before the Scenario");
-        System.setProperty("webdriver.chrome.driver","E:\\AutomationPractice\\automationpractice\\src\\main\\resources\\libs\\chromedriver_win32\\chromedriver.exe");
-        cg= new Config();
-        driver=new ChromeDriver() ;
-        String url= cg.getProperty("URL");
-        System.out.println("AUT URL :: "+url);
-        driver.get("http://newtours.demoaut.com");
-        pg= new RegisterPage(driver);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+        try {
+            cg = new Config();
+            driver = DriverManager.getLocalWebDriver(cg.getProperty("Browser"));
+
+            System.out.println("This will run before the Scenario");
+
+            String url = cg.getProperty("URL");
+            System.out.println("AUT URL :: " + url);
+            driver.get(url);
+            pg = new RegisterPage(driver);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
 
     }
@@ -45,6 +50,14 @@ public class StepDefs {
     @After
     public void afterScenario(){
         System.out.println("This will run after the Scenario");
+        try
+        {
+            DriverManager.closeDriver();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @Given("^User is on Home Page$")
@@ -76,8 +89,7 @@ public class StepDefs {
         System.out.println("Value::"+actual);
         String expected="Thank you for registering. You may now sign-in using the user name and password you've just entered.";
         Assert.assertEquals(expected,actual);
-        driver.close();
-        driver.quit();
+
 
 
     }

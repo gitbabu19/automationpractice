@@ -1,0 +1,6 @@
+utils\Config.class
+po\RegisterPage.class
+utils\FileReaderManager.class
+hooks\Hooks.class
+runner\TestRunner.class
+steps\StepDefs.class
