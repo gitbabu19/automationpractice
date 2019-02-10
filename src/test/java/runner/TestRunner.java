@@ -1,12 +1,13 @@
 package runner;
 
+import com.cucumber.listener.ExtentProperties;
+import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import com.cucumber.listener.Reporter;
-import com.cucumber.listener.ExtentProperties;
+import com.cucumber.listener.ExtentCucumberFormatter;
 import java.io.*;
 import utils.FileReaderManager;
 
@@ -22,7 +23,7 @@ import java.util.Properties;
         tags={"@Smoke"},
         plugin= { "pretty","html:target/cucumber-reports","json:target/cucumber-reports/Cucumber.json",
         "junit:target/cucumber-reports/Cucumber.xml",
-        "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/TestReport.html"},
+        "com.cucumber.listener.ExtentCucumberFormatter:output/myreport.html"},
         monochrome=false
 )
 public class TestRunner {
@@ -31,10 +32,8 @@ public class TestRunner {
     @BeforeClass
     public static void setup() {
         String timestamp=LocalDateTime.now().toString();
-//        String reportPath="E:/AutomationPractice/automationpractice/output"+"TestReport"+timestamp+".html";
-//        ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-//        System.out.println(reportPath);
-//        extentProperties.setReportPath(reportPath);
+         ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+        extentProperties.setReportPath("output/myreport_"+timestamp+".html");
     }
     @AfterClass
     public static void writeExtentReport() {

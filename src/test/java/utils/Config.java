@@ -36,6 +36,21 @@ public class Config {
             throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");
         }
     }
+    public  String getProperty(String strKey)
+    {
+        String strPropValue;
+        if (strKey!=null)
+        {
+            strPropValue= properties.getProperty(strKey);
+            System.out.println("KEY :: "+strKey+"  FOUND in properties file, VALUE is :: "+strPropValue);
+        }
+        else
+        {
+            strPropValue=null;
+            System.out.println("KEY :: "+strKey+"  FOUND in properties file");
+        }
+        return  strPropValue;
+    }
 
 }
 

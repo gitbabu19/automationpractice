@@ -14,10 +14,10 @@ Feature: Register User on http://newtours.demoaut.com/
 
       |FirstName||LastName||Phone||Email||Address||City||State||PostalCode||Country||UserName||Password||ConfirmPassword|
       |Sanvi||Dahi||1234567890||sanvi01@gmail.com||Pune||Pune||MH||411057||INDIA||Sanvi02||Temp@123||Temp@123|
-      |Valli||Ghul||2234567890||sanvi02@gmail.com||Pune||Pune||MH||411057||INDIA||Sanvi02||Temp@456||Temp@456|
-      |Adi||Gar||3234567890||sanvi03@gmail.com||Pune||Pune||MH||411057||INDIA||Sanvi02||Temp@789||Temp@789|
+#      |Valli||Ghul||2234567890||sanvi02@gmail.com||Pune||Pune||MH||411057||INDIA||Sanvi02||Temp@456||Temp@456|
+#      |Adi||Gar||3234567890||sanvi03@gmail.com||Pune||Pune||MH||411057||INDIA||Sanvi02||Temp@789||Temp@789|
 
-  @Smoke
+  @Smoke123
   Scenario Outline: Register User TC02
 
     Given User is on Home Page
